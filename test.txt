@@ -1,1 +1,19 @@
 Testing repo...
+
+Pathway to app startup:
+main.ts --> app.module.ts --> app.component.ts --> index.html --> app.component.html
+**index.html is the page that is getting served up in the browser when we visit the appropriate localhost page**
+
+
+Angular is a JS framework, changing the DOM (HTML) at runtime
+Angular is for Single Page Applications
+
+Angular = Components!!
+======================
+app component = root component
+each component has its own business logic
+components are reusable
+each component will typically have its own folder within the project structure
+component = a typescript class, instantiated by angular
+components can be created "by hand", or also by using the CLI
+components can be nested inside one another
