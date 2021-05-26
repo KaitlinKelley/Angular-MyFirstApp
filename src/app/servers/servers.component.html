@@ -1,2 +1,12 @@
+<button [disabled]="!allowNewServer" class="btn btn-primary">Add Server</button>
+<!--we are dynamically binding the disabled property-->
+<!--the button will only be disabled if allowNewServer = false-->
+
+<!--string interpolation-->
+<p>{{ allowNewServer }}</p>
+
+<!--same, but with property binding instead-->
+<p [innerText]="allowNewServer"></p>
+
 <app-server></app-server>
 <app-server></app-server>

@@ -17,3 +17,19 @@ each component will typically have its own folder within the project structure
 component = a typescript class, instantiated by angular
 components can be created "by hand", or also by using the CLI
 components can be nested inside one another
+a component HAS to have a template(for inline) or templateUrl(for pointing to external file)
+component selector must be unique!!
+
+
+Databinding
+==============
+communication between the typescript code(business logic) and the template(html)
+4 Types:
+-string interpolation {{data}}
+---->whatever is put inside the double braces must ultimately resolve to a string!
+---->no multi-line or block expressions
+-property binding [property] = "data"
+-event binding (event) = "expression"
+-two-way-binding [(ngModel)] = "data"
+can output data, and react to user events
+

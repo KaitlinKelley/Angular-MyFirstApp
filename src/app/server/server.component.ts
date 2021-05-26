@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 })
 //"export" allows us access to this info outside of this file
 export class ServerComponent {
+  serverId:number = 10;
+  serverStatus:string = "offline";
 
+  getServerStatus(){
+    return this.serverStatus;
+  }
 }

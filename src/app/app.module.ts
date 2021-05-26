@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 //the line below is where we tell typescript where to find the server component
 import {ServerComponent} from "./server/server.component";
 import { ServersComponent } from './servers/servers.component';
+import { WarningAlertComponent } from "./warning-alert/warning-alert.component";
+import { SuccessMessageComponent } from './success-message/success-message.component';
 
 @NgModule({
   //this is where we register components, so Angular recognizes them
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    WarningAlertComponent,
+    SuccessMessageComponent
   ],
   imports: [
     BrowserModule
