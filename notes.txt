@@ -42,4 +42,8 @@ directives = instructions in the dom!
 kind of like components without a template
 typically added with an attribute selector
 ngIf directive requires * (looks like *ngIf)
+ngIf = structural directive --> alters the DOM structure, adds or removes elements
+attribute directives --> only change the element they are placed on, they don't add or remove elements
+*ngFor = structural directive
+ngClass = attribute directive
 

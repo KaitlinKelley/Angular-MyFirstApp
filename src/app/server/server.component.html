@@ -1,4 +1,9 @@
-<p>Server with ID {{ serverId }} is {{ serverStatus }}</p>
+<!--note that we are using property binding on ngStyle and ngClass-->
+<!--ngClass adds a css class conditionally-->
+<p
+  [ngStyle]="{backgroundColor:getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}"
+  >Server with ID {{ serverId }} is {{ serverStatus }}</p>
 
 <!--Can also do:-->
 <!--<p>{{ "Server" }} with ID {{ serverId }} is {{ getServerStatus() }}</p>-->
