@@ -33,3 +33,5 @@ communication between the typescript code(business logic) and the template(html)
 -two-way-binding [(ngModel)] = "data"
 can output data, and react to user events
 
+use $event to fetch the event data
+
