@@ -1,9 +1,23 @@
-<label>Server Name</label>
+<label for="userName">Enter Username:</label>
+<input
+  id="userName"
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+<p>You have entered: {{ userName }}</p>
+<button [disabled]="userName === ''"
+        class="btn btn-danger"
+        (click)="resetUsername()"
+        >Reset username to empty string</button>
+
+
+<label for="serverName">Server Name</label>
 <!--<input-->
 <!--  type="text"-->
 <!--  class="form-control"-->
 <!--  (input)="onUpdateServerName($event)">-->
 <input
+  id="serverName"
   type="text"
   class="form-control"
   [(ngModel)]="serverName">
