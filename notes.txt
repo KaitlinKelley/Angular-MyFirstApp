@@ -35,3 +35,11 @@ can output data, and react to user events
 
 use $event to fetch the event data
 
+
+Directives
+============
+directives = instructions in the dom!
+kind of like components without a template
+typically added with an attribute selector
+ngIf directive requires * (looks like *ngIf)
+
