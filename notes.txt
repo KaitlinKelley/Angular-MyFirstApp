@@ -47,3 +47,8 @@ attribute directives --> only change the element they are placed on, they don't 
 *ngFor = structural directive
 ngClass = attribute directive
 
+Error Messages, Debugging
+===============
+Sourcemaps allow the browser to "back-translate" from js to ts
+
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {timestamp} from "rxjs/operators";
 
 @Component({
   //class-style selector
@@ -22,6 +23,8 @@ export class ServersComponent implements OnInit {
   userName:string = "";
   serverCreated:boolean = false;
   servers = ["Testserver", "Testserver2"];
+  buttonClicks = [];
+  showSecretText = false;
 
   constructor() {
     setTimeout(() => {
@@ -45,5 +48,11 @@ export class ServersComponent implements OnInit {
   resetUsername(){
     this.userName = "";
   }
+
+  onBuzzButton(){
+    let timestamp = Math.floor(Date.now()/1000);
+    this.buttonClicks.push(timestamp);
+  }
+
 
 }
