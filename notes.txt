@@ -52,3 +52,30 @@ Error Messages, Debugging
 Sourcemaps allow the browser to "back-translate" from js to ts
 
 
+NgFor
+========
+ng-for loop
+
+The ng-for loop is a structural directive. We will see how to change the structure of the dom.
+
+Point is to repeat given HTML ones for each value in an array[]. Context is each time passing the array value for string interpolation or binding.
+
+The syntax is *for =” let <value> of collection.”
+
+<value> is a variable name, <collection.> is a property on your component which holds a collection, usually an array but anything that can be iterated.
+
+Ng-For - local variable
+Index - used to provide the index for the current element while iteration.
+First - return true if the current element is the last in the iteration otherwise it is false.
+Even - return true if current elements are even elements based on the index in the iteration otherwise false.
+It is used to execute the block of code to a specific item number. A for loop is contains the initialization, condition, and increment/ decrement in a single line, which provides easy debug, and structure of looping.
+The for loop is used to control the repeated statements.
+A for loop is worked till the condition is (found)/matches successfully.
+A for-loop id is used to repeat a portion of part of the HTML template once per item from an iterable list.
+Example
+
+First, you have to create an application using the command " ng serve". Then open this project and then create a component using the command " ng g component loops". Go to the .ts file and take a variable array type. and then put the few values. Then go to the HTML file and make a list. Take a list item and then put the *ng-for loop. Then take put this variable name in the interpolation with the variable name like - {{student.name}}.
+
+Now save all the files.
+
+
