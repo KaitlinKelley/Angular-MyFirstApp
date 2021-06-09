@@ -95,4 +95,94 @@ This directive creates new scope.
 This directive executes at priority level 600.
 This directive can be used as multiElement
 
+Two-Way Binding
+================
+Two-way data binding
+Here you will learn how to do two-way data binding in Angular.
+
+Two-way data binding refers to sharing data between a component class and its template. If you change data in one place, it will automatically reflate at the other end. For example, if you change the value of the input box, then it will also update the value of the attached property in a component class.
+
+Two-way data binding performs the following actions:
+
+Sets a property of a component class
+Listens for a DOM element change event
+Angular v2+ supports two-way data binding using ngModel directive and also by having getter and setter methods.
+
+ngModel Directive
+The ngModel directive with [()] syntax (also known as banana box syntax) syncs values from the UI to a property and vice-versa. So, whenever the user changes the value on UI, the corresponding property value will get automatically updated.
+
+[()] = [] + () where [] binds attribute, and () binds an event.
+
+Example: Banana Box [()] Copy
+import { Component, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'app-greet',
+  template: `
+  User Name: <input type="text" [(ngModel)]="userName"  ><br/>
+    {{userName}}
+    `
+})
+export class GreetComponent implements OnInit {
+
+  constructor() { }
+
+  userName: string = "jbond";
+
+  ngOnInit(): void {
+  }
+
+}
+The [(ngModel)] syntax is the recommended way of two-way data binding.
+
+The ngModel directive with [] syntax is used for one-way data binding. [ngModel] binds a value to a property to UI control.
+
+Getter and Setter Methods
+For two-way data binding, declare a private property and access its value using get and set methods in the component class. Then, assign that property to [(ngModel)].
+
+For example, declare a private property with a get and set method, as shown below.
+
+Example: Private Property Copy
+private _userName: string = "bill gates";
+
+  get userName(): string {
+    return this._userName;
+  }
+
+  set userName(val: string) {
+    //do some extra work here
+    this._userName = val;
+  }
+Now, assign userName to [(ngModel)] in the template.
+
+Example: [(ngModel)] Copy
+<input type="text" [(ngModel)]="userName" >
+The following is a full example of two-way data binding using get and set methods.
+
+Example: Two-way Data Binding Copy
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-greet',
+  template: `
+  User Name: <input type="text" [(ngModel)]="userName" ><br/>
+    {{userName}}`
+})
+export class GreetComponent implements OnInit {
+
+  constructor() { }
+
+  private _userName: string = "bill gates";
+
+  get userName(): string {
+    return this._userName;
+  }
+  set userName(val: string) {
+    //do some extra work here
+    this._userName = val;
+  }
+  ngOnInit(): void {
+  }
+}
+
 
